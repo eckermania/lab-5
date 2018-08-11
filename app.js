@@ -9,9 +9,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-    var output = a+b;
-    var message = 'The sum of ' + a + ' and ' + b + ' is ' + output + '.';
-    return [output, message];
+  var output = a+b;
+  var message = 'The sum of ' + a + ' and ' + b + ' is ' + output + '.';
+  return [output, message];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -30,9 +30,9 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
 
-    var output = a * b;
-    var message = 'The product of ' + a + ' and ' + b + ' is ' + output + '.';
-    return [output, message];
+  var output = a * b;
+  var message = 'The product of ' + a + ' and ' + b + ' is ' + output + '.';
+  return [output, message];
 
 }
 
@@ -54,15 +54,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    var outputSum = sum(sum(a, b)[0], c)[0];
-    // console.log(outputSum);
-    var outputProduct = multiply(multiply(a, b)[0], c)[0];
-    // console.log(outputProduct);
-    var messageSum = a + ' and ' + b + ' and ' + c + ' sum to ' + outputSum + '.';
-    // console.log(messageSum);
-    var messageProduct = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + outputProduct + '.';
-    // console.log(messageProduct)
-return [outputSum, outputProduct, messageSum, messageProduct];
+  var outputSum = sum(sum(a, b)[0], c)[0];
+  // console.log(outputSum);
+  var outputProduct = multiply(multiply(a, b)[0], c)[0];
+  // console.log(outputProduct);
+  var messageSum = a + ' and ' + b + ' and ' + c + ' sum to ' + outputSum + '.';
+  // console.log(messageSum);
+  var messageProduct = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + outputProduct + '.';
+  // console.log(messageProduct)
+  return [outputSum, outputProduct, messageSum, messageProduct];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -85,11 +85,16 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 
+  var arraySum = sum(sum(sumArr[0],sumArr[1])[0],sumArr[2])[0];
+  var arrayMessage = sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + arraySum + ' is their sum.';
+  console.log(arraySum);
+  console.log(arrayMessage);
+  return [arraySum, arrayMessage]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
